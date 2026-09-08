@@ -377,7 +377,19 @@ function sharePhotos() {
 }
 
 function showDressCode() {
-    showToast("Dress Code", "No blanco, no amarillo, no rojo 👗");
+    const modal = document.getElementById('dresscodeModal');
+    if (modal) {
+        modal.style.display = 'flex';
+    }
+}
+
+function closeDressCodeModal() {
+    // El click dentro de la tarjeta del modal usa stopPropagation(), así que
+    // esta función solo se dispara al hacer click en el fondo oscuro o en la X.
+    const modal = document.getElementById('dresscodeModal');
+    if (modal) {
+        modal.style.display = 'none';
+    }
 }
 
 function showGifts() {
