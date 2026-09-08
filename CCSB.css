@@ -252,6 +252,54 @@ html { background-color: #FFC72C; }
     background: none;
 }
 
+/* Ramo de girasoles decorativo: arriba de todo, parcialmente
+   recortado por el borde superior de la ventana */
+.top-garland {
+    position: absolute;
+    top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(640px, 92vw);
+    z-index: 3;
+    pointer-events: none;
+}
+
+.top-garland img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .top-garland {
+        top: -40px;
+        width: min(420px, 88vw);
+    }
+}
+
+/* Separador floral entre secciones: centrado sobre la línea de unión,
+   sin recortar (mantiene su proporción original) */
+.section-divider {
+    position: relative;
+    z-index: 2;
+    width: min(480px, 82vw);
+    margin: -34px auto;
+    pointer-events: none;
+}
+
+.section-divider img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .section-divider {
+        width: min(300px, 78vw);
+        margin: -20px auto;
+    }
+}
+
 .hero-content {
     position: relative;
     width: 100%;
