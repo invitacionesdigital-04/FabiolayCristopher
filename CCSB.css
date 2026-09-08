@@ -757,8 +757,8 @@ html { background-color: #FFC72C; }
 .party-icon svg,
 .gift-icon svg,
 .whatsapp-icon svg {
-    color: #FFC72C !important;
-    fill: #FFC72C !important;
+    color: #53402D !important;
+    fill: #53402D !important;
 }
 
 .event-icon:hover,
