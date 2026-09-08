@@ -757,8 +757,8 @@ html { background-color: #FFC72C; }
 .party-icon svg,
 .gift-icon svg,
 .whatsapp-icon svg {
-    color: #222 !important;
-    fill: #222 !important;
+    color: #FFC72C !important;
+    fill: #FFC72C !important;
 }
 
 .event-icon:hover,
@@ -787,6 +787,11 @@ html { background-color: #FFC72C; }
 }
 .hero-text .date::before, .hero-text .date::after {
     content: ""; display: block; height: 1px; width: 80px; background: #fff;
+}
+.date-hidden,
+.date-hidden::before,
+.date-hidden::after {
+    visibility: hidden;
 }
 /* Line below names */
 .hero-text .names { 
