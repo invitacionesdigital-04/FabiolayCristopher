@@ -372,7 +372,7 @@ html { background-color: #FFC72C; }
 .section-title {
     font-family: 'Playfair Display', serif;
     font-size: 3rem;
-    color: #D9A404;
+    color: #3B3024;
     margin-bottom: 1rem;
     font-weight: 700;
 }
@@ -406,14 +406,14 @@ html { background-color: #FFC72C; }
 .countdown-number {
     font-size: clamp(1.2rem, 4vw, 2rem);
     font-weight: 700;
-    color: #D9A404;
+    color: #3B3024;
     margin-bottom: 0.1rem;
     animation: flip-in 0.6s ease-out;
 }
 
 .countdown-label {
     font-size: clamp(0.5rem, 1.8vw, 0.7rem);
-    color: #D9A404;
+    color: #3B3024;
     text-transform: uppercase;
     letter-spacing: 0.03em;
     font-weight: 500;
@@ -466,7 +466,7 @@ html { background-color: #FFC72C; }
 .event-title {
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
-    color: #D9A404 !important;
+    color: #3B3024 !important;
     margin-bottom: 1.5rem;
     font-weight: 700;
     letter-spacing: 0.02em;
@@ -511,7 +511,7 @@ html { background-color: #FFC72C; }
     border-radius: 9999px;
     border: none;
     background: linear-gradient(135deg, #FFC72C, #FFE066);
-    color: #111;
+    color: #3B3024;
     font-weight: 500;
     cursor: pointer;
     box-shadow: var(--shadow-elegant);
@@ -533,7 +533,7 @@ html { background-color: #FFC72C; }
 .rsvp-container button {
     border-radius: 9999px !important;
     background: linear-gradient(90deg, #FFC72C 0%, #FFE066 100%) !important;
-    color: #111 !important;
+    color: #3B3024 !important;
     font-weight: 600;
     font-size: 1.1rem;
     box-shadow: 0 4px 18px -6px rgba(255, 226, 122, 0.18);
@@ -723,7 +723,7 @@ html { background-color: #FFC72C; }
     border: 10px solid #FFC72C; /* amarillo girasol */
     border-bottom-width: 38px; /* pie polaroid */
     border-radius: 4px;
-    box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+    box-shadow: 0 10px 24px rgba(217,164,4,0.35);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -1448,7 +1448,7 @@ button[class*="carousel"] {
     .framed-photo { margin: 16px auto 24px; max-width: calc(100% - 32px); }
 }
 
-.framed-photo:hover { box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
+.framed-photo:hover { box-shadow: 0 15px 30px rgba(217,164,4,0.3); }
 
 
 
@@ -1457,7 +1457,7 @@ button[class*="carousel"] {
     .carousel-item.is-center { z-index: 2; }
     .carousel-item.is-center .framed-photo {
         transform: scale(1.12) rotate(-0.2deg);
-        box-shadow: 0 34px 68px rgba(0,0,0,0.4);
+        box-shadow: 0 34px 68px rgba(217,164,4,0.45);
     }
 }
 
