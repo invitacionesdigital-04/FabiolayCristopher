@@ -277,7 +277,7 @@ function initializeCarousel() {
     // Auto-play del carrusel
     setInterval(() => {
         nextSlide();
-    }, 4000);
+    }, 2500);
 }
 
 function updateCarousel() {
@@ -298,15 +298,28 @@ function updateCarousel() {
         const containerWidth = Math.round(container.getBoundingClientRect().width);
         const visibleCount = Math.max(1, Math.floor((containerWidth + 1) / stepWidth));
         const maxIndex = Math.max(0, totalSlides - visibleCount);
-        if (currentSlide > maxIndex) currentSlide = 0;
-        if (currentSlide < 0) currentSlide = maxIndex;
+
+        // Detecta si hay que dar la vuelta (de la última foto a la 1, o viceversa)
+        let wrapped = false;
+        if (currentSlide > maxIndex) { currentSlide = 0; wrapped = true; }
+        if (currentSlide < 0) { currentSlide = maxIndex; wrapped = true; }
 
         const trackRect = track.getBoundingClientRect();
         const baseLeft = Math.round(firstRect.left - trackRect.left);
         const translateXpx = -Math.round(baseLeft + (currentSlide * stepWidth));
 
-        // Apply transform
-        track.style.transform = `translateX(${translateXpx}px)`;
+        if (wrapped) {
+            // Al dar la vuelta, salta directo a la foto 1 sin animar el regreso
+            // (evita el efecto de "devolverse" deslizando hacia atrás por todas las fotos)
+            const prevTransition = track.style.transition;
+            track.style.transition = 'none';
+            track.style.transform = `translateX(${translateXpx}px)`;
+            void track.offsetWidth; // fuerza reflow para aplicar el salto sin animación
+            track.style.transition = prevTransition || '';
+        } else {
+            // Apply transform
+            track.style.transform = `translateX(${translateXpx}px)`;
+        }
         // console.log('Carousel moved to slide:', { currentSlide, visibleCount, maxIndex, translateXpx, stepWidth, baseLeft });
     }
     updateSlideCounter();
