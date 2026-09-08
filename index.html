@@ -143,7 +143,8 @@
         <!-- Modal de Bienvenida -->
         <div id="welcomeModal" class="modal-overlay">
             <div class="welcome-hero">
-                <h1 class="welcome-title">Bienvenidos a la<br/>invitación de Fabiola Bonati y<br/>Cristopher Custodio Victoriano</h1>
+                <h1 class="welcome-title welcome-title-sm">Bienvenidos a la<br/>invitación de Fabiola Bonati y<br/>Cristopher Custodio Victoriano</h1>
+                <p class="welcome-message">En este día especial, queremos rodearnos de nuestras familias y amigos para celebrar el amor que nos une.</p>
                 <p class="welcome-note">La música de fondo es parte de la experiencia</p>
                 <div class="welcome-actions">
                     <button id="enterWithMusic" class="btn-gold" onclick="enterWithMusicClick()">Ingresar con música</button>
@@ -221,7 +222,7 @@
             <img src="https://raw.githubusercontent.com/invitacionesdigital-04/FabiolayCristopher/main/separador-girasoles.png" alt="">
         </div>
         <section class="events-section">
-            <div class="events-container">
+            <div class="events-container events-container-single">
                 <!-- Ceremony -->
                 <div class="event-card">
                     <div class="event-icon modern-icon">
@@ -236,6 +237,7 @@
                     <div class="event-details">
                         <h4>Día</h4>
                         <p>Domingo 20 de Diciembre - 15:30hs</p>
+                        <p class="event-punctuality">Por favor ser puntual</p>
                     </div>
                     <div class="event-details">
                         <h4>Lugar</h4>
@@ -243,29 +245,6 @@
                         <p class="event-address">Av. Pergamino 203 - Santo Domingo</p>
                     </div>
                     <button class="btn-wedding" onclick="openLocation('ceremony')">¿Cómo llegar?</button>
-                </div>
-
-                <!-- Celebration -->
-                <div class="event-card">
-                    <div class="event-icon modern-icon">
-                        <lord-icon
-                            src="https://cdn.lordicon.com/ohcuigqh.json"
-                            trigger="loop"
-                            colors="primary:#3A2A1A,secondary:#3A2A1A"
-                            style="width:110px;height:110px">
-                        </lord-icon>
-                    </div>
-                    <h3 class="event-title">Celebración</h3>
-                    <div class="event-details">
-                        <h4>Día</h4>
-                        <p>Domingo 20 de Diciembre - 15:30hs</p>
-                    </div>
-                    <div class="event-details">
-                        <h4>Lugar</h4>
-                        <p>Salón de fiestas Avril</p>
-                        <p class="event-address">Av. Los Reartes 12 - Santo Domingo</p>
-                    </div>
-                    <button class="btn-wedding" onclick="openLocation('celebration')">¿Cómo llegar?</button>
                 </div>
             </div>
         </section>

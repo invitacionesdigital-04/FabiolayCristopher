@@ -393,14 +393,12 @@ function closeDressCodeModal() {
 }
 
 function showGifts() {
-    const message = "Hola, me gustaría información sobre los regalos para la boda de Fabiola y Cristopher 🎁";
-    const whatsappUrl = `https://wa.me/1234567890?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
+    const giftUrl = "https://invitacionesdigital-04.github.io/NumerodecuentaCristopher-/";
+    window.open(giftUrl, '_blank');
 }
 
 function confirmAttendance() {
-    // Reemplazar por el enlace real del Google Form de confirmación de asistencia
-    const googleFormUrl = "https://forms.gle/COLOCAR_ID_DEL_FORMULARIO_AQUI";
+    const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfipgK_z5RBnuNS4FquAwie-OR33N-nVoR1DakWSTPpuCYUjA/viewform?usp=publish-editor";
     window.open(googleFormUrl, '_blank');
 }
 

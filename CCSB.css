@@ -95,6 +95,36 @@ html { background-color: #FFC72C; }
     margin-bottom: 1rem;
 }
 
+.welcome-title-sm {
+    font-size: clamp(1.35rem, 3vw, 1.9rem);
+    margin-bottom: 1.1rem;
+}
+
+.welcome-message {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: #d7a44a;
+    font-size: clamp(0.95rem, 1.6vw, 1.15rem);
+    line-height: 1.7;
+    letter-spacing: 0.3px;
+    max-width: 560px;
+    margin: 0 auto 1.5rem;
+    position: relative;
+    padding-top: 1.25rem;
+}
+
+.welcome-message::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #d7a44a, transparent);
+}
+
 .welcome-note {
     color: #a7a7a7;
     margin-bottom: 1.25rem;
@@ -549,6 +579,25 @@ html { background-color: #FFC72C; }
 
 .event-details p {
     color: #6B6258;
+}
+
+.event-punctuality {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.92rem;
+    color: #a86b00 !important;
+    letter-spacing: 0.3px;
+    margin-top: 0.35rem;
+}
+
+.events-container-single {
+    display: flex;
+    justify-content: center;
+}
+
+.events-container-single .event-card {
+    max-width: 480px;
+    width: 100%;
 }
 
 .event-address {
