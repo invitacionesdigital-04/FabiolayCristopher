@@ -371,8 +371,7 @@ function openLocation(location) {
 }
 
 function sharePhotos() {
-    // Reemplazar por el enlace real (ej. álbum de Google Fotos / Drive) para subir fotos
-    const photosUrl = "https://COLOCAR_ENLACE_PARA_SUBIR_FOTOS_AQUI";
+    const photosUrl = "https://photos.app.goo.gl/cz7u7qsTjmUAryB5A";
     window.open(photosUrl, '_blank');
 }
 
