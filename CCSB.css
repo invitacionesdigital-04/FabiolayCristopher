@@ -46,13 +46,13 @@ html, body {
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #8B5E3C; /* fondo marrón solicitado */
+    background-color: #FFC72C; /* amarillo girasol */
     color: hsl(var(--foreground));
     line-height: 1.6;
     box-sizing: border-box;
 }
 
-html { background-color: #8B5E3C; }
+html { background-color: #FFC72C; }
 
 /* Tipografía */
 .names {
@@ -719,8 +719,8 @@ html { background-color: #8B5E3C; }
     height: 100%;
     object-fit: cover;
     box-sizing: border-box;
-    background: #8B5E3C;
-    border: 10px solid #1F1F1F; /* gris oscuro solicitado */
+    background: #FFC72C;
+    border: 10px solid #FFC72C; /* amarillo girasol */
     border-bottom-width: 38px; /* pie polaroid */
     border-radius: 4px;
     box-shadow: 0 10px 24px rgba(0,0,0,0.25);
@@ -977,6 +977,14 @@ html { background-color: #8B5E3C; }
     animation: gentle-pulse 2s ease-in-out infinite;
 }
 
+/* Icono "Comparte tus Fotos" estático, sin animación */
+.static-icon {
+    animation: none !important;
+}
+.static-icon lord-icon {
+    pointer-events: none;
+}
+
 /* RSVP */
 .hashtag {
     font-size: 1.5rem;
@@ -1007,6 +1015,54 @@ html { background-color: #8B5E3C; }
     color: hsl(var(--gold));
     font-size: 0.875rem;
     margin-top: 1rem;
+}
+
+/* Modal Dress Code */
+.dresscode-modal {
+    position: relative;
+    max-width: 420px;
+    width: 90%;
+    background: linear-gradient(135deg, rgba(17,17,17,0.96), rgba(34,34,34,0.96));
+    border: 1px solid hsl(var(--gold) / 0.6);
+    border-radius: 16px;
+    padding: 2.5rem 2rem 2rem;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.04) inset;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.modal-title-dark {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: #FFC72C;
+    margin-bottom: 1rem;
+}
+
+.modal-text-dark {
+    color: #fff;
+    font-size: 1.05rem;
+}
+
+.dresscode-modal .dresscode-colors {
+    margin: 1.25rem 0 0;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.9rem;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.75rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+    color: #FFC72C;
 }
 
 /* Toast */
@@ -1327,8 +1383,10 @@ html { background-color: #8B5E3C; }
     color: #fff !important;
 }
 
+.footer-content p,
+.footer-content h3,
 .footer-date {
-    color: #FFC72C !important;
+    color: #D9A404 !important;
 }
 
 /* Textos sobre las secciones (ahora en fondo blanco) en tono oscuro para contraste */
@@ -1429,4 +1487,3 @@ button[class*="carousel"] {
 }
 
 /* Portada (desktop): usar imagen por defecto y altura de la sección base */
-
