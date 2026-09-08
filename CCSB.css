@@ -1,7 +1,7 @@
 /* Variables CSS */
 :root {
     --background: 0 0% 100%;
-    --foreground: 0 0% 18%;
+    --foreground: 31 24% 19%; /* #3B3024 - letras principales */
     --primary: 0 0% 20%;
     --primary-foreground: 0 0% 95%;
     --gold: 46 100% 51%;
@@ -163,7 +163,7 @@ html { background-color: #FFC72C; }
     display: flex;
     align-items: center;
     justify-content: center;
-    color: hsl(var(--gold));
+    color: #3A2A1A;
 }
 
 .modal-buttons {
@@ -249,7 +249,7 @@ html { background-color: #FFC72C; }
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: none;
 }
 
 .hero-content {
@@ -446,7 +446,7 @@ html { background-color: #FFC72C; }
     display: flex;
     align-items: center;
     justify-content: center;
-    color: hsl(var(--gold));
+    color: #3A2A1A;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
     animation: gentle-pulse 2s ease-in-out infinite;
 }
@@ -497,7 +497,7 @@ html { background-color: #FFC72C; }
 }
 
 .event-details p {
-    color: hsl(var(--foreground) / 0.7);
+    color: #6B6258;
 }
 
 .event-address {
@@ -728,7 +728,7 @@ html { background-color: #FFC72C; }
 }
 
 .section-subtitle {
-    color: hsl(var(--foreground) / 0.7);
+    color: #6B6258;
     margin-bottom: 3rem;
 }
 
@@ -744,7 +744,7 @@ html { background-color: #FFC72C; }
     display: flex;
     align-items: center;
     justify-content: center;
-    color: hsl(var(--gold));
+    color: #3A2A1A;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
     animation: gentle-bounce 2s ease-in-out infinite;
 }
@@ -874,7 +874,8 @@ html { background-color: #FFC72C; }
 
 .party-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 270px));
+    justify-content: center;
     gap: 2rem;
     margin-top: 3rem;
 }
@@ -906,9 +907,9 @@ html { background-color: #FFC72C; }
 }
 
 .party-card {
-    padding: 2rem;
+    padding: 3rem 1.75rem;
     border: 2px solid hsl(var(--gold) / 0.2);
-    border-radius: 0.5rem;
+    border-radius: 2rem;
     background-color: hsl(var(--warm-white));
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
@@ -930,7 +931,7 @@ html { background-color: #FFC72C; }
     display: flex;
     align-items: center;
     justify-content: center;
-    color: hsl(var(--gold));
+    color: #3A2A1A;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
     animation: gentle-pulse 2s ease-in-out infinite;
 }
@@ -943,7 +944,7 @@ html { background-color: #FFC72C; }
 }
 
 .party-card p {
-    color: hsl(var(--foreground) / 0.7);
+    color: #6B6258;
     margin-bottom: 1.5rem;
 }
 
@@ -968,7 +969,7 @@ html { background-color: #FFC72C; }
     display: flex;
     align-items: center;
     justify-content: center;
-    color: hsl(var(--gold));
+    color: #3A2A1A;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
     animation: gentle-bounce 2s ease-in-out infinite;
 }
@@ -995,8 +996,8 @@ html { background-color: #FFC72C; }
 
 /* Footer */
 .footer {
-    background-color: hsl(var(--brown));
-    color: white;
+    background-color: #D9A404; /* amarillo un poco más oscuro que el girasol */
+    color: #3B3024;
     padding: 2rem 1rem;
     text-align: center;
     width: 100%;
@@ -1377,23 +1378,23 @@ html { background-color: #FFC72C; }
     50% { transform: translateY(10px); }
 }
 
-/* Textos sobre fondo oscuro (modal de bienvenida y footer) siguen en blanco/dorado */
-.modal-subtitle,
-.footer-date {
+/* Texto sobre fondo oscuro (modal de bienvenida) sigue en blanco */
+.modal-subtitle {
     color: #fff !important;
 }
 
+/* Footer ahora tiene fondo amarillo oscuro: texto en marrón chocolate para contraste */
 .footer-content p,
 .footer-content h3,
 .footer-date {
-    color: #D9A404 !important;
+    color: #3B3024 !important;
 }
 
 /* Textos sobre las secciones (ahora en fondo blanco) en tono oscuro para contraste */
 .event-details h4,
 .party-card h3,
 .hashtag {
-    color: #2a2a2a !important;
+    color: #3B3024 !important;
 }
 
 /* Show carousel navigation buttons */
@@ -1467,6 +1468,9 @@ button[class*="carousel"] {
         padding: 0 1rem;
     }
     .party-card {
+        max-width: 320px;
+        margin: 0 auto;
+        border-radius: 2rem;
         overflow: visible;
         word-break: break-word;
     }
