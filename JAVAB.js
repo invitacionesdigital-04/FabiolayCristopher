@@ -404,6 +404,22 @@ function closeDressCodeModal() {
     }
 }
 
+function showDetails() {
+    const modal = document.getElementById('detallesModal');
+    if (modal) {
+        modal.style.display = 'flex';
+    }
+}
+
+function closeDetallesModal() {
+    // El click dentro de la tarjeta del modal usa stopPropagation(), así que
+    // esta función solo se dispara al hacer click en el fondo oscuro o en la X.
+    const modal = document.getElementById('detallesModal');
+    if (modal) {
+        modal.style.display = 'none';
+    }
+}
+
 function showGifts() {
     const giftUrl = "https://invitacionesdigital-04.github.io/NumerodecuentaCristopher-/";
     window.open(giftUrl, '_blank');
