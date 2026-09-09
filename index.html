@@ -115,6 +115,21 @@
             max-width: 800px;
             margin: 0 auto;
         }
+        @keyframes ringTwinkle {
+            0%, 100% { opacity: 0; transform: scale(0.4); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+        @keyframes ringShine {
+            0% { opacity: 0.25; }
+            50% { opacity: 0.6; }
+            100% { opacity: 0.25; }
+        }
+        .ring-sparkle { transform-origin: center; transform-box: fill-box; animation: ringTwinkle 2.2s ease-in-out infinite; }
+        .ring-sparkle.s1 { animation-delay: 0s; }
+        .ring-sparkle.s2 { animation-delay: 0.7s; }
+        .ring-sparkle.s3 { animation-delay: 1.4s; }
+        .ring-shine { animation: ringShine 3s ease-in-out infinite; }
+        .ring-shine-2 { animation: ringShine 3s ease-in-out infinite; animation-delay: 1.2s; }
         .carousel-btn {
             position: absolute;
             top: 50%;
@@ -144,7 +159,6 @@
         <div id="welcomeModal" class="modal-overlay">
             <div class="welcome-hero">
                 <h1 class="welcome-title welcome-title-sm">Bienvenidos a la<br/>invitación de Fabiola Bonati y<br/>Cristopher Custodio Victoriano</h1>
-                <p class="welcome-message">En este día especial, queremos rodearnos de nuestras familias y amigos para celebrar el amor que nos une.</p>
                 <p class="welcome-note">La música de fondo es parte de la experiencia</p>
                 <div class="welcome-actions">
                     <button id="enterWithMusic" class="btn-gold" onclick="enterWithMusicClick()">Ingresar con música</button>
@@ -175,10 +189,8 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <div class="date date-hidden" aria-hidden="true">20.12.2026</div>
-                    <h1 class="names">Fabiola Bonati <span class="ampersand">y</span> Cristopher Custodio Victoriano</h1>
                     <blockquote class="quote">
-                        "Todos somos mortales,<br />
-                        hasta el primer beso y la segunda copa de vino"
+                        En este día especial, queremos rodearnos de nuestras familias y amigos para celebrar el amor que nos une.
                     </blockquote>
                     <div class="scroll-indicator">
                         <div class="scroll-mouse">
@@ -226,12 +238,28 @@
                 <!-- Ceremony -->
                 <div class="event-card">
                     <div class="event-icon modern-icon">
-                        <svg width="110" height="110" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M32 6 L57 25 L50 25 L50 54 L14 54 L14 25 L7 25 Z" fill="#53402D"/>
-                            <rect x="27" y="36" width="10" height="18" rx="1" fill="#fff"/>
-                            <rect x="19" y="30" width="7" height="7" rx="1" fill="#fff"/>
-                            <rect x="38" y="30" width="7" height="7" rx="1" fill="#fff"/>
-                            <rect x="43" y="10" width="4" height="9" fill="#53402D"/>
+                        <svg width="110" height="110" viewBox="0 0 240 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="150" cy="140" r="48" stroke="#53402D" stroke-width="11" fill="none"/>
+                            <path d="M 118 108 A 48 48 0 0 1 168 96" stroke="#8a6a4a" stroke-width="4" fill="none" stroke-linecap="round" class="ring-shine"/>
+                            <rect x="130" y="86" width="7" height="14" rx="1.5" fill="#53402D"/>
+                            <rect x="163" y="86" width="7" height="14" rx="1.5" fill="#53402D"/>
+                            <polygon points="150,52 172,74 150,96 128,74" fill="#ffffff" stroke="#53402D" stroke-width="2.5"/>
+                            <polygon points="150,52 138,74 150,68 162,74" fill="#f4f0ea" stroke="#53402D" stroke-width="1.2"/>
+                            <line x1="150" y1="52" x2="150" y2="96" stroke="#53402D" stroke-width="1.2"/>
+                            <line x1="128" y1="74" x2="172" y2="74" stroke="#53402D" stroke-width="1.2"/>
+                            <line x1="138" y1="74" x2="150" y2="52" stroke="#53402D" stroke-width="1"/>
+                            <line x1="162" y1="74" x2="150" y2="52" stroke="#53402D" stroke-width="1"/>
+                            <circle cx="95" cy="140" r="48" stroke="#53402D" stroke-width="13" fill="none"/>
+                            <path d="M 63 108 A 48 48 0 0 1 113 96" stroke="#8a6a4a" stroke-width="4" fill="none" stroke-linecap="round" class="ring-shine-2"/>
+                            <g class="ring-sparkle s1">
+                                <path d="M 188 46 L 190 54 L 198 56 L 190 58 L 188 66 L 186 58 L 178 56 L 186 54 Z" fill="#53402D"/>
+                            </g>
+                            <g class="ring-sparkle s2">
+                                <path d="M 110 40 L 111.5 45 L 116.5 46.5 L 111.5 48 L 110 53 L 108.5 48 L 103.5 46.5 L 108.5 45 Z" fill="#53402D"/>
+                            </g>
+                            <g class="ring-sparkle s3">
+                                <path d="M 178 24 L 179 28 L 183 29 L 179 30 L 178 34 L 177 30 L 173 29 L 177 28 Z" fill="#53402D"/>
+                            </g>
                         </svg>
                     </div>
                     <h3 class="event-title">Ceremonia</h3>
@@ -257,7 +285,7 @@
         <section class="gallery-section">
             <div class="gallery-container">
                 <h2 class="section-title">Retratos de Nuestro Amor</h2>
-                <p class="section-subtitle">Un minuto, un segundo, un instante que queda en la eternidad</p>
+                <p class="section-subtitle">Todos somos mortales, hasta el primer beso y la segunda copa de vino</p>
                 
                 <div class="camera-icon modern-icon">
                     <lord-icon
