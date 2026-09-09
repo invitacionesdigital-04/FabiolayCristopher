@@ -808,9 +808,10 @@ html { background-color: #FFC72C; }
 /* Decorative gold quotes above and below */
 .quote { 
     position: relative; 
-    margin-top: 6rem;
+    margin-top: 1.5rem;
     font-size: 1.3rem;
     font-weight: 400;
+    transform: translateY(4rem);
 }
 .quote::before, .quote::after {
     position: absolute; left: 50%; transform: translateX(-50%); color: #FFC72C; font-family: 'Playfair Display', serif;
