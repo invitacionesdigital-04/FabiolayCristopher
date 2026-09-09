@@ -808,7 +808,7 @@ html { background-color: #FFC72C; }
 /* Decorative gold quotes above and below */
 .quote { 
     position: relative; 
-    margin-top: 1.5rem;
+    margin-top: 3.5rem;
     font-size: 1.3rem;
     font-weight: 400;
 }
