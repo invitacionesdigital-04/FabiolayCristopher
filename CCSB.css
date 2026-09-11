@@ -342,7 +342,7 @@ html { background-color: #FFC72C; }
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: hsl(var(--foreground));
+    color: #000000;
     padding: 1rem;
     box-sizing: border-box;
 }
